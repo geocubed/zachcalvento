@@ -1,0 +1,131 @@
+{{ define "main" }}
+<div class="portfolio-single">
+    {{ if .Params.youtube }}
+    <div class="portfolio-single__video-container">
+        <div class="portfolio-single__video-wrapper">
+            <iframe class="portfolio-single__video" 
+                src="{{ replace .Params.youtube "youtu.be" "youtube.com/embed" }}" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+    {{ end }}
+
+    <div class="portfolio-single__content">
+        <h1 class="portfolio-single__title">{{ .Title }}</h1>
+        
+        <div class="portfolio-single__meta">
+            <span>{{ .Params.year }}</span>
+            <span>{{ .Params.contentType }}</span>
+            <span>{{ .Params.runtime }}</span>
+        </div>
+
+        {{ if .Params.description }}
+        <div class="portfolio-single__description">
+            <p>{{ .Params.description }}</p>
+        </div>
+        {{ end }}
+
+        {{ if .Params.accolades }}
+        <div class="portfolio-single__accolades">
+            <h2 class="portfolio-single__accolades-title">Accolades</h2>
+            <ul class="portfolio-single__accolades-list">
+                {{ range .Params.accolades }}
+                <li>{{ . }}</li>
+                {{ end }}
+            </ul>
+        </div>
+        {{ end }}
+
+        {{ if .Params.poster }}
+        <div class="portfolio-single__poster">
+            <h2 class="portfolio-single__poster-title">Poster</h2>
+            <img src="{{ .Params.poster }}" alt="{{ .Title }} poster" class="portfolio-single__poster-image" onclick="openLightbox(this.src)" oncontextmenu="return false" draggable="false">
+        </div>
+        {{ end }}
+
+        {{ if .Params.gallery }}
+        <div class="portfolio-single__gallery">
+            <h2 class="portfolio-single__gallery-title">Gallery</h2>
+            <div class="portfolio-single__gallery-grid">
+                {{ range .Params.gallery }}
+                <div class="portfolio-single__gallery-item">
+                    <img src="{{ . }}" alt="Gallery image" class="portfolio-single__gallery-image" onclick="openLightbox(this.src)" oncontextmenu="return false" draggable="false">
+                </div>
+                {{ end }}
+            </div>
+        </div>
+        {{ end }}
+    </div>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <button class="lightbox__close" onclick="closeLightbox()">×</button>
+        <button class="lightbox__nav lightbox__prev" onclick="event.stopPropagation(); changeImage(-1)">&#10094;</button>
+        <button class="lightbox__nav lightbox__next" onclick="event.stopPropagation(); changeImage(1)">&#10095;</button>
+        <img id="lightbox-img" class="lightbox__image" src="" alt="Lightbox image" oncontextmenu="return false" draggable="false">
+    </div>
+</div>
+
+<script>
+let currentImageIndex = 0;
+const images = [
+    {{ if .Params.poster }}"{{ .Params.poster }}"{{ end }}{{ if and .Params.poster .Params.gallery }},{{ end }}
+    {{ range $index, $element := .Params.gallery }}{{ if $index }},{{ end }}"{{ $element }}"{{ end }}
+].filter(Boolean);
+
+// Prevent right-click on all images
+document.addEventListener('contextmenu', function(e) {
+    if (e.target.tagName === 'IMG') {
+        e.preventDefault();
+        return false;
+    }
+});
+
+// Prevent drag and drop
+document.addEventListener('dragstart', function(e) {
+    if (e.target.tagName === 'IMG') {
+        e.preventDefault();
+        return false;
+    }
+});
+
+// Prevent keyboard shortcuts
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        closeLightbox();
+    } else if (e.key === 'ArrowLeft') {
+        changeImage(-1);
+    } else if (e.key === 'ArrowRight') {
+        changeImage(1);
+    }
+    // Prevent common keyboard shortcuts
+    if ((e.ctrlKey || e.metaKey) && (e.key === 's' || e.key === 'c' || e.key === 'p' || e.key === 'u')) {
+        e.preventDefault();
+        return false;
+    }
+});
+
+function openLightbox(src) {
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    currentImageIndex = images.indexOf(src);
+    lightboxImg.src = src;
+    lightbox.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+}
+
+function closeLightbox() {
+    const lightbox = document.getElementById('lightbox');
+    lightbox.style.display = 'none';
+    document.body.style.overflow = 'auto';
+}
+
+function changeImage(direction) {
+    currentImageIndex = (currentImageIndex + direction + images.length) % images.length;
+    document.getElementById('lightbox-img').src = images[currentImageIndex];
+}
+</script>
+{{ end }}

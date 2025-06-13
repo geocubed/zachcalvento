@@ -1,0 +1,41 @@
+{{ define "main" }}
+<video class="landing__video" autoplay muted loop playsinline oncontextmenu="return false" controlsList="nodownload">
+  <source src="/uploads/zachcalvento-landing-hero2.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+<div class="landing__content">
+  <h1 class="landing__title">Zach Calvento</h1>
+  <p class="landing__subtitle">Writer and Director</p>
+  <div class="landing__cta">
+    <a href="/contact" class="btn btn--primary">Get in Touch</a>
+    <a href="/portfolio" class="btn btn--secondary">View Portfolio</a>
+  </div>
+</div>
+
+<script>
+// Prevent right-click on video
+document.addEventListener('contextmenu', function(e) {
+    if (e.target.tagName === 'VIDEO') {
+        e.preventDefault();
+        return false;
+    }
+});
+
+// Prevent drag and drop
+document.addEventListener('dragstart', function(e) {
+    if (e.target.tagName === 'VIDEO') {
+        e.preventDefault();
+        return false;
+    }
+});
+
+// Prevent keyboard shortcuts
+document.addEventListener('keydown', function(e) {
+    if ((e.ctrlKey || e.metaKey) && (e.key === 's' || e.key === 'c' || e.key === 'p' || e.key === 'u')) {
+        e.preventDefault();
+        return false;
+    }
+});
+</script>
+{{ end }}

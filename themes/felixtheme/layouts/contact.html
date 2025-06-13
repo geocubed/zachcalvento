@@ -1,0 +1,39 @@
+{{ define "main" }}
+<div class="contact">
+    <div class="contact__container">
+        <h1 class="contact__title">{{ .Title }}</h1>
+        <div class="contact__text">
+            {{ .Content }}
+        </div>
+        <div class="contact__links">
+            {{ if .Params.email }}
+            <a href="mailto:{{ .Params.email }}" class="contact__link contact__link--email">
+                <i class="fas fa-envelope"></i>
+                <span>Email</span>
+            </a>
+            {{ end }}
+            
+            {{ if .Params.instagram }}
+            <a href="{{ .Params.instagram }}" target="_blank" rel="noopener noreferrer" class="contact__link contact__link--instagram">
+                <i class="fab fa-instagram"></i>
+                <span>Instagram</span>
+            </a>
+            {{ end }}
+            
+            {{ if .Params.youtube }}
+            <a href="{{ .Params.youtube }}" target="_blank" rel="noopener noreferrer" class="contact__link contact__link--youtube">
+                <i class="fab fa-youtube"></i>
+                <span>YouTube</span>
+            </a>
+            {{ end }}
+            
+            {{ if .Params.linkedin }}
+            <a href="{{ .Params.linkedin }}" target="_blank" rel="noopener noreferrer" class="contact__link contact__link--linkedin">
+                <i class="fab fa-linkedin"></i>
+                <span>LinkedIn</span>
+            </a>
+            {{ end }}
+        </div>
+    </div>
+</div>
+{{ end }} 

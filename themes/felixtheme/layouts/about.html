@@ -1,0 +1,47 @@
+{{ define "main" }}
+<div class="about">
+    <div class="about__container">
+        <div class="about__image-container">
+            {{ if .Params.image }}
+                <img src="{{ .Params.image }}" alt="{{ .Title }}" class="about__image" oncontextmenu="return false" draggable="false">
+            {{ end }}
+        </div>
+        <div class="about__content">
+            <h1 class="about__title">{{ .Title }}</h1>
+            <div class="about__text">
+                {{ .Content }}
+            </div>
+            <div class="about__cta">
+                <a href="/contact" class="btn btn--primary">Get in Touch</a>
+                <a href="/portfolio" class="btn btn--secondary">View Portfolio</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+// Prevent right-click on all images
+document.addEventListener('contextmenu', function(e) {
+    if (e.target.tagName === 'IMG') {
+        e.preventDefault();
+        return false;
+    }
+});
+
+// Prevent drag and drop
+document.addEventListener('dragstart', function(e) {
+    if (e.target.tagName === 'IMG') {
+        e.preventDefault();
+        return false;
+    }
+});
+
+// Prevent keyboard shortcuts
+document.addEventListener('keydown', function(e) {
+    if ((e.ctrlKey || e.metaKey) && (e.key === 's' || e.key === 'c' || e.key === 'p' || e.key === 'u')) {
+        e.preventDefault();
+        return false;
+    }
+});
+</script>
+{{ end }} 

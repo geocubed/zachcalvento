@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects on My New Hugo Site for Zach</title>
+    <link>http://localhost:1313/projects/</link>
+    <description>Recent content in Projects on My New Hugo Site for Zach</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 10 Jun 2025 16:05:45 -0700</lastBuildDate>
+    <atom:link href="http://localhost:1313/projects/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Test2</title>
+      <link>http://localhost:1313/projects/test2/</link>
+      <pubDate>Tue, 10 Jun 2025 16:05:45 -0700</pubDate>
+      <guid>http://localhost:1313/projects/test2/</guid>
+      <description>&lt;p&gt;Write your project description here using Markdown.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Test</title>
+      <link>http://localhost:1313/projects/test/</link>
+      <pubDate>Tue, 10 Jun 2025 16:04:13 -0700</pubDate>
+      <guid>http://localhost:1313/projects/test/</guid>
+      <description>&lt;p&gt;this is the first test&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Prescribed Memories</title>
+      <link>http://localhost:1313/projects/prescribed-memories/</link>
+      <pubDate>Tue, 10 Jun 2025 15:52:34 -0700</pubDate>
+      <guid>http://localhost:1313/projects/prescribed-memories/</guid>
+      <description>&lt;h1 id=&#34;my-first-awesome-project&#34;&gt;My First Awesome Project&lt;/h1&gt;&#xA;&lt;p&gt;This is the &lt;strong&gt;description&lt;/strong&gt; of my first portfolio project.&lt;/p&gt;&#xA;&lt;p&gt;It was a really cool project where I learned a lot about:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;HTML&lt;/li&gt;&#xA;&lt;li&gt;CSS&lt;/li&gt;&#xA;&lt;li&gt;JavaScript&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;You can imagine a more detailed description, screenshots, and links here.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

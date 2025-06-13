@@ -1,0 +1,54 @@
+{{ define "main" }}
+  <div class="portfolio">
+    <h1 class="portfolio__title">Directing Portfolio</h1>
+    <div class="portfolio__grid">
+      {{ range .Pages }}
+        <a href="{{ .RelPermalink }}" class="portfolio__item">
+          <div class="portfolio__image-container">
+            {{ if .Params.thumbnail }}
+              <img src="{{ .Params.thumbnail }}" alt="{{ .Title }}" class="portfolio__thumbnail" oncontextmenu="return false" draggable="false">
+            {{ end }}
+          </div>
+          <div class="portfolio__details">
+            <h2 class="portfolio__item-title">{{ .Title }}</h2>
+            <div class="portfolio__meta">
+              <span class="portfolio__year">{{ .Params.year }}</span>
+              <span class="portfolio__type">{{ .Params.contentType }}</span>
+            </div>
+            <p class="portfolio__description">{{ .Params.description }}</p>
+          </div>
+        </a>
+      {{ end }}
+    </div>
+    <div class="portfolio__cta">
+      <h2 class="portfolio__cta-title">Like what you see?</h2>
+      <a href="/contact" class="btn btn--primary">Get in Touch</a>
+    </div>
+  </div>
+
+  <script>
+  // Prevent right-click on all images
+  document.addEventListener('contextmenu', function(e) {
+      if (e.target.tagName === 'IMG') {
+          e.preventDefault();
+          return false;
+      }
+  });
+
+  // Prevent drag and drop
+  document.addEventListener('dragstart', function(e) {
+      if (e.target.tagName === 'IMG') {
+          e.preventDefault();
+          return false;
+      }
+  });
+
+  // Prevent keyboard shortcuts
+  document.addEventListener('keydown', function(e) {
+      if ((e.ctrlKey || e.metaKey) && (e.key === 's' || e.key === 'c' || e.key === 'p' || e.key === 'u')) {
+          e.preventDefault();
+          return false;
+      }
+  });
+  </script>
+{{ end }}

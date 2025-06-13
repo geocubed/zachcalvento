@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Zach Calvento</title>
+    <link>//localhost:1313/</link>
+    <description>Recent content on Zach Calvento</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 10 Jun 2025 16:08:04 -0700</lastBuildDate>
+    <atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About</title>
+      <link>//localhost:1313/about/</link>
+      <pubDate>Tue, 10 Jun 2025 16:08:04 -0700</pubDate>
+      <guid>//localhost:1313/about/</guid>
+      <description>&lt;p&gt;Zach Calvento directs short form narratives and music videos and is always looking for new challenges and opportunities.&lt;/p&gt;&#xA;&lt;p&gt;Zach was born in Los Angeles and raised in Vancouver, BC where he currently works. His passion for filmmaking started at an early age and continued to grow from there. He attended Capilano University in the Degree of Motion Picture Arts and graduated as of 2022.&lt;/p&gt;&#xA;&lt;p&gt;His work focuses on the human connection and how people can persevere from the hardest of challenges. Ranging from losing a love one or the feeling of losing yourself. Zach continues to try and capture these emotions through his films with the collaboration of others.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Contact</title>
+      <link>//localhost:1313/contact/</link>
+      <pubDate>Tue, 10 Jun 2025 16:08:04 -0700</pubDate>
+      <guid>//localhost:1313/contact/</guid>
+      <description>&lt;p&gt;Get in touch with me for collaborations, opportunities, or just to say hello!&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>My Last Words to You</title>
+      <link>//localhost:1313/portfolio/2025-my-last-words-to-you/</link>
+      <pubDate>Wed, 01 Jan 2025 11:34:00 +0000</pubDate>
+      <guid>//localhost:1313/portfolio/2025-my-last-words-to-you/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Expiry Date</title>
+      <link>//localhost:1313/portfolio/2025-expiry-date/</link>
+      <pubDate>Sat, 24 Feb 2024 04:20:00 +0000</pubDate>
+      <guid>//localhost:1313/portfolio/2025-expiry-date/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Prescribed Memories</title>
+      <link>//localhost:1313/portfolio/prescribed-memories/</link>
+      <pubDate>Wed, 04 May 2022 11:35:00 +0000</pubDate>
+      <guid>//localhost:1313/portfolio/prescribed-memories/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

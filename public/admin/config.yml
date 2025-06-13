@@ -1,0 +1,55 @@
+backend:
+  name: git-gateway # This backend is recommended for Netlify Identity
+  branch: main      # Or 'master', depending on your Git repo's default branch
+
+# These paths are relative to the project root
+media_folder: "static/uploads" # Folder where uploaded images will be stored
+public_folder: "/uploads"      # Base URL for uploaded images
+
+collections:
+  - name: "portfolio"
+    label: "Films"
+    folder: "content/portfolio"
+    create: true
+    slug: "{{year}}-{{slug}}"
+    identifier_field: "title"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Type", name: "type", widget: "hidden", default: "portfolio" }
+      - { label: "Content Type", name: "contentType", widget: "select", options: ["Short Film", "Feature Film", "Documentary", "Commercial", "Music Video"] }
+      - { label: "Year", name: "year", widget: "string", pattern: ["\\d{4}", "Must be a 4-digit year"] }
+      - { label: "Runtime", name: "runtime", widget: "string", hint: "e.g., 7mins, 2h 15min" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Accolades", name: "accolades", widget: "list", required: false, 
+          field: { label: "Accolade", name: "accolade", widget: "string" } }
+      - { label: "YouTube Link", name: "youtube", widget: "string", required: false, 
+          hint: "Full YouTube URL (e.g., https://youtu.be/...)" }
+      - { label: "Thumbnail Image", name: "thumbnail", widget: "image", required: false }
+      - { label: "Poster Image", name: "poster", widget: "image", required: false }
+      - { label: "Gallery Images", name: "gallery", widget: "list", required: false,
+          field: { label: "Image", name: "image", widget: "image" } }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Draft", name: "draft", widget: "boolean", default: true }
+
+  - name: "pages" # Internal name for single pages like "About Me"
+    label: "Site Pages" # Display name in the CMS UI
+    files: # For single files, you list them explicitly
+      - file: "content/about.md" # Path to your About Me file
+        label: "About Me Page"
+        name: "about-page" # Internal identifier for this specific file
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Profile Image", name: "image", widget: "image", required: false }
+          - { label: "Description", name: "body", widget: "markdown" }
+          - { label: "Draft", name: "draft", widget: "boolean", default: true } # Default to draft
+      - file: "content/contact.md" # Path to your Contact file
+        label: "Contact Page"
+        name: "contact-page" # Internal identifier for this specific file
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Email", name: "email", widget: "string" }
+          - { label: "Instagram", name: "instagram", widget: "string" }
+          - { label: "YouTube", name: "youtube", widget: "string" }
+          - { label: "LinkedIn", name: "linkedin", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
+          - { label: "Draft", name: "draft", widget: "boolean", default: true } # Default to draft

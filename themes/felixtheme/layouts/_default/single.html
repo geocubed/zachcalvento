@@ -1,0 +1,27 @@
+{{ define "main" }}
+    <article>
+        <h1>{{ .Title }}</h1>
+        {{ if eq .Type "projects" }}
+            {{ with .Params.featured_image }}
+                <img src="{{ . }}" alt="{{ .Title }} featured image">
+            {{ end }}
+            <p><strong>Description:</strong> {{ .Params.description }}</p>
+            {{ if .Params.technologies }}
+                <p><strong>Technologies:</strong></p>
+                <ul class="technologies-list">
+                    {{ range .Params.technologies }}
+                        <li>{{ . }}</li>
+                    {{ end }}
+                </ul>
+            {{ end }}
+            {{ with .Params.project_url }}
+                <p><a href="{{ . }}" target="_blank" rel="noopener noreferrer">View Live Project</a></p>
+            {{ end }}
+            {{ with .Params.github_url }}
+                <p><a href="{{ . }}" target="_blank" rel="noopener noreferrer">GitHub Repository</a></p>
+            {{ end }}
+            <hr>
+        {{ end }}
+
+        {{ .Content }} </article>
+{{ end }}
