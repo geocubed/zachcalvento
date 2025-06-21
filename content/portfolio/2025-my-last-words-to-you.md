@@ -1,9 +1,9 @@
 ---
-title: My Final Words to You
+title: My Last Words to You
 type: portfolio
 contentType: Short Film
 year: "2025"
-runtime: 10mins
+runtime: 14mins
 description: When the seemingly perfect eldest daughter, Anna-Marie Reyes,
   struggles to write a eulogy for her mother. She must confront her past complex
   relationship with her mom before the funeral begins.
