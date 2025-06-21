@@ -3,7 +3,7 @@ date: 2025-06-10T16:08:04-07:00
 title: About
 draft: false
 layout: about
-image: /uploads/zachcalvento-about.jpg
+image: /uploads/img_0455-edited.png
 ---
 
 Zach Calvento directs short form narratives and music videos and is always looking for new challenges and opportunities.
