@@ -1,5 +1,5 @@
 ---
-title: My Last Words to You
+title: My Final Words to You
 type: portfolio
 contentType: Short Film
 year: "2025"
