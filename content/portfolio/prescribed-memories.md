@@ -11,7 +11,7 @@ accolades:
   - Best Sci-Fi/Fantasy - altff Short Category Fall 2022
   - Best Acting- Western Canadian International Film Festival 2022
 youtube: https://youtu.be/BCjLBRVE-n0?si=rinI7DZ2wC6tPruf
-thumbnail: /uploads/prescribedmemories1.jpg
+thumbnail: /uploads/screenshot-2024-11-19-105324.png
 poster: /uploads/prescribedmemories-poster.png
 gallery:
   - /uploads/prescribedmemories1.jpg
