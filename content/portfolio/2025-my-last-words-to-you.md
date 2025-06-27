@@ -7,7 +7,7 @@ runtime: 14mins
 description: When the seemingly perfect eldest daughter, Anna-Marie Reyes,
   struggles to write a eulogy for her mother. She must confront her past complex
   relationship with her mom before the funeral begins.
-thumbnail: /uploads/mylastwordstoyou1.jpg
+thumbnail: /uploads/mylastwordstoyou3.png
 poster: /uploads/mylastwordstoyou-poster.png
 gallery:
   - /uploads/mylastwordstoyou1.jpg
