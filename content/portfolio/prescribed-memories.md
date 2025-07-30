@@ -12,7 +12,7 @@ accolades:
   - Best Acting- Western Canadian International Film Festival 2022
 youtube: https://youtu.be/BCjLBRVE-n0?si=rinI7DZ2wC6tPruf
 thumbnail: /uploads/screenshot-2024-11-19-105324.png
-poster: /uploads/prescribedmemories-poster.png
+poster: /uploads/untitled-design-3-.png
 gallery:
   - /uploads/prescribedmemories1.jpg
   - /uploads/prescribedmemories2.png
