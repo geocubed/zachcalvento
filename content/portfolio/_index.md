@@ -15,6 +15,6 @@ gallery:
   - /uploads/screenshot_2025-09-01_190100.jpg
   - /uploads/screenshot_2025-08-28_191312.jpg
   - /uploads/screenshot_2025-09-20_113919.jpg
-date: 2025-10-08T19:00:00.000-07:00
-draft: true
+date: 2025-10-08T19:30:00.000-07:00
+draft: false
 ---
