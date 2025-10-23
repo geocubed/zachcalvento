@@ -4,8 +4,9 @@ type: portfolio
 contentType: Short Film
 year: "2022"
 runtime: 7mins
-description: A short film about a woman who takes a pill that makes her forget
-  her ex-boyfriend.
+description: A man who obtains Memory Pills from his brother which allows him to
+  relive the memories he had with his deceased wife. However, the more his
+  obsession with the past grows the more he takes these pills.
 accolades:
   - Best Director - Western Canadian International Film Festival 2022
   - Best Sci-Fi/Fantasy - altff Short Category Fall 2022
