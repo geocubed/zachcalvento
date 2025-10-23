@@ -13,6 +13,6 @@ gallery:
   - /uploads/mylastwordstoyou1.jpg
   - /uploads/mylastwordstoyou2.png
   - /uploads/mylastwordstoyou3.png
-date: 2025-01-01T11:34:00.000Z
+date: 2025-04-17T03:34:00.000-07:00
 draft: false
 ---
