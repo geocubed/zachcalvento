@@ -5,7 +5,7 @@ layout: contact
 date: 2025-06-10T16:08:04-07:00
 title: Contact
 email: zach.calvento@gmail.com
-instagram: https://www.instagram.com/zach_marker/
+instagram: https://www.instagram.com/zach_calvento/
 linkedin: https://www.linkedin.com/in/zach-calvento-9179351b6/
 ---
 
