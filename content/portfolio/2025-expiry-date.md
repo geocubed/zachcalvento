@@ -13,6 +13,6 @@ gallery:
   - /uploads/expirydate1.jpg
   - /uploads/expirydate2.png
   - /uploads/expirydate3.jpg
-date: 2024-02-14T20:20:00.000-08:00
+date: 2024-02-23T20:20:00.000-08:00
 draft: false
 ---
